@@ -30,27 +30,37 @@
 
         <div class="menu__actions">
           <div class="action">
-            <label for="filter">Filter by genre</label>
-            <select name="filter" id="filter" class="filter-list">
-              <option value="genre"></option>
+            <label for="filter">Genre</label>
+            <select name="filter" id="filter" class="action__filter">
+              <option value="electronic">Electronic</option>
+              <option value="jazz">Jazz</option>
+              <option value="metal">Metal</option>
+              <option value="pop">Pop</option>
+              <option value="rock">Rock</option>
             </select>
-            <img src="./assets/icons/filter.svg" alt="filter" class="icon">
+            <button type="button" class="filter__button">
+              <img src="./assets/icons/filter.svg" alt="filter" class="icon">
+            </button>
           </div>
 
           <div class="action">
             <label for="sort">Sort by</label>
-            <select name="sort" id="sort" class="sort">
+            <select name="sort" id="sort" class="action__sort">
               <option value="#">Default</option>
               <option value="title">Title</option>
               <option value="artist">Artist</option>
               <option value="duration">Duration</option>
             </select>
-            <img src="./assets/icons/sort.svg" alt="sorting arrows" class="icon">
+            <button type="button" class="sort__button">
+              <img src="./assets/icons/sort.svg" alt="sorting arrows" class="icon">
+            </button>
           </div>
 
           <div class="action">
-            <input type="search" name="search" id="search" placeholder="Search">
-            <img src="./assets/icons/magnifying-glass.svg" alt="magnifying glass" class="icon">
+            <input type="text" id="search" class="action__search" placeholder="Search">
+            <button type="button" class="search__button">
+              <img src="./assets/icons/magnifying-glass.svg" alt="magnifying glass" class="icon">
+            </button>
           </div>
         </div>
       </div>
@@ -59,17 +69,15 @@
     <!-- Music collection -->
     <section class="collection">
       <div class="collection__grid">
-        <ol class="collection-items">
-          <li class="item">
-            <div class="add-item">
-              <button type="button" class="add">+</button>
+        <div class="collection__card">
+          <div class="card__image">
+            <div class="add-card">
+                <button type="button" class="add">+</button>
             </div>
-            <div class="item__image"></div>
-            <div class="item__title"></div>
-            <div class="item__artist"></div>
-            <div class="item__duration"></div>
-          </li>
-        </ol>
+            <img src="#" alt="">
+          </div>
+          <ul class="songs__list"></ul>
+        </div>
       </div>
     </section>
 
