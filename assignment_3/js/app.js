@@ -1,9 +1,9 @@
-// const tab = document.querySelectorAll(".tab");
-// const button = document.querySelectorAll(".tab-title")
+// const tab = document.querySelectorAll(".tab-title");
 
-// button.addEventListener("click", () => {
+// tab.addEventListener("click", () => {
 //  tab.classList.add("active");
 // });
+
 
 const songsList = document.querySelector(".songs__list")
 
@@ -13,7 +13,17 @@ const renderSongs = () => {
     li.classList.add("songs__card");
     songsList.append(li);
 
-    const cardTitle = document.createElement("h3");
+    const cardImage = document.createElement("div")
+    cardImage.classList.add("card__image")
+    li.append(cardImage);
+
+    const cardIcon = document.createElement("img");
+    cardIcon.classList.add("card__icon");
+    cardIcon.src = "./assets/icons/disc.svg"
+    cardIcon.alt = "Music disc icon"
+    cardImage.append(cardIcon);
+
+    const cardTitle = document.createElement("h4");
     cardTitle.classList.add("card__title");
     cardTitle.textContent = songs[i].title;
     li.append(cardTitle);
