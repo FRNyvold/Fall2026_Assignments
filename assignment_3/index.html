@@ -17,14 +17,14 @@
   <main>
     <section class="menu">
       <div class="menu__grid">
-        <ol class="menu__tabs">
-          <li class="tab tab__collection">
-            <span class="tab-title">Collection</span>
+        <ul class="menu__tabs">
+          <li class="tab">
+            <span class="tablink" onclick="openTab(0)" id="defaultOpen">Collection</span>
           </li>
-          <li class="tab tab__playlist">
-            <span class="tab-title">My playlist</span>
+          <li class="tab">
+            <span class="tablink" onclick="openTab(1)">My playlist</span>
           </li>
-        </ol>
+        </ul>
 
         <!-- Actions -->
 
@@ -32,11 +32,12 @@
           <div class="action">
             <label for="filter">Genre</label>
             <select name="filter" id="filter" class="action__filter">
-              <option value="electronic">Electronic</option>
-              <option value="jazz">Jazz</option>
-              <option value="metal">Metal</option>
-              <option value="pop">Pop</option>
-              <option value="rock">Rock</option>
+              <option value="All">All</option>
+              <option value="Electronic">Electronic</option>
+              <option value="Jazz">Jazz</option>
+              <option value="Metal">Metal</option>
+              <option value="Pop">Pop</option>
+              <option value="Rock">Rock</option>
             </select>
             <button type="button" class="filter__button">
               <img src="./assets/icons/filter.svg" alt="filter" class="icon">
@@ -67,21 +68,21 @@
     </section>
 
     <!-- Music collection -->
-    <section class="collection">
-      <div class="collection__grid">
+    <div class="tabcontent">
+      <div class="panel">
         <div class="collection__card">
-            <div class="add-card">
-                <button type="button" class="add">+</button>
-            </div>
             <ul class="songs__list"></ul>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Playlist section -->
-    <section class="playlist">
-
-    </section>
+    <div class="tabcontent">
+      <div class="panel">
+        <p>test</p>
+        <ul class="playlist"></ul>
+      </div>
+    </div>
   </main>
 
   <footer class="footer"></footer>

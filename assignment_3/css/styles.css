@@ -35,7 +35,7 @@ body{
   gap: var(--spacing-xl);
 }
 
-.tab{
+.tablink{
   cursor: pointer;
   padding: var(--spacing-sm);
   font-size: var(--font-size-md);
@@ -44,11 +44,11 @@ body{
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tab:hover{
-  background-color: var(--color-hover);
+.tablink:hover{
+  background-color: var(--color-hover-1);
   color: var(--color-text-inverse);
 }
-.tab:active{
+.tablink:active{
   transform: scale(0.9);
 }
 
@@ -81,7 +81,16 @@ input{
   transform: scale(0.9);
 }
 
-.collection{
+.tabcontent{
+  height: 100%;
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.panel{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -102,13 +111,13 @@ input{
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   padding: var(--spacing-sm);
-  transition: background-color 0.3s ease;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .songs__card:hover{
-  background-color: var(--color-hover);
+  border-color: var(--color-tertriary);
 }
 
 .card__image{
@@ -119,9 +128,18 @@ input{
   align-items: center;
   justify-content: center;
   margin-bottom: var(--spacing-md);
-  background-color: var(--color-primary-2);
+  background: #080A21;
+  background: linear-gradient(45deg, rgba(8, 10, 33, 1) 40%, rgba(209, 52, 91, 1) 88%);
 }
 
 .card__icon{
   width: 100px;
+}
+
+.card__button{
+  align-self: flex-end;
+  transition: 0.1s ease;
+}
+.card__button:active{
+  transform: scale(0.9);
 }
